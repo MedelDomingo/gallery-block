@@ -2,13 +2,18 @@
   "name": "kmc_exam_2025",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://MedelDomingo.github.io/gallery-block",
   "scripts": {
     "build": "webpack --mode production && sass src/assets/scss/styles.scss dist/assets/css/styles.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "webpack serve"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.6.4",
     "sass": "^1.93.2",
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",

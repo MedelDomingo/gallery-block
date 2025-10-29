@@ -1,12 +1,16 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // Used to deploy project on the free hosting on github
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
     clean: true,
+  },
+  performance: {
+    maxAssetSize: 500000, // this will limit the file size of the image on dev
   },
   devServer: { static: "./src" },
   module: {
@@ -27,9 +31,14 @@ module.exports = {
         test: /\.(png|jpg|webp)$/i,
         type: "asset/resource",
         generator: {
-          filename: "./src/assets/images/[name][ext]", // For image assets
+          filename: "assets/images/[name][ext]", // For image assets
         },
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html", // this make sure that dist/ has the index.html for git hosting
+    }),
+  ],
 };
