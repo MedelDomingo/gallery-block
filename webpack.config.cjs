@@ -10,7 +10,7 @@ module.exports = {
     clean: true,
   },
   performance: {
-    maxAssetSize: 500000, // this will limit the file size of the image on dev
+    maxAssetSize: 500000, // this will limit the file size of the image on dev NOTE: that even it has a warning about the img size, you can't upload changes on github hosted site
   },
   devServer: { static: "./src" },
   module: {
