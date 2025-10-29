@@ -1,0 +1,48 @@
+@use "variables" as *;
+@use "./components/index";
+@use "./layout/sections";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+  height: 100%;
+  background-color: $color-black;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  height: 100%;
+  color: $color-white;
+  padding: 15px;
+}
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+}
+a {
+  display: block;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+}

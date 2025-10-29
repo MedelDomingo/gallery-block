@@ -1,0 +1,87 @@
+@media screen {
+  .content-wrapper {
+    text-align: center;
+  }
+  .content-wrapper .heading-wrapper h1,
+  .content-wrapper .heading-wrapper h2 {
+    font-size: 30px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+  .content-wrapper .heading-wrapper h1::after,
+  .content-wrapper .heading-wrapper h2::after {
+    content: "";
+    height: 2px;
+    width: 250px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .content-wrapper p {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 21px;
+    line-height: 30px;
+  }
+  .content-wrapper .short-desc__wrapper {
+    text-align: center;
+  }
+  .content-wrapper .short-desc__wrapper h3 {
+    color: #cf1430;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  .content-wrapper .short-desc__wrapper h4 {
+    font-size: 21px;
+    font-weight: bold;
+    font-stretch: normal;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  height: 100%;
+  color: #fff;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
